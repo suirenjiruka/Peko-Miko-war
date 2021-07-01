@@ -38,14 +38,14 @@ public class carrotbomb extends object {
         for (CharacterProtype p : player) {
             if (p.Player != user && state == 0) {
                 if (direct == 1) {
-                    pos.translate(22, 0);
+                    pos.translate(24, 0);
                 } else if (direct == 2) {
-                    pos.translate(-22, 0);
+                    pos.translate(-24, 0);
                 }
                 if (p.getpos().y > pos.y) {
-                    pos.translate(0, 6);
+                    pos.translate(0, 7);
                 } else if (p.getpos().y < pos.y - 80) {
-                    pos.translate(0, -6);
+                    pos.translate(0, -7);
                 }
                 if ((pos.y + height > p.getpos().y + 30 && pos.y + height < p.getpos().y + 210)
                         || (pos.y > p.getpos().y + 30 && pos.y < p.getpos().y + 210)) {

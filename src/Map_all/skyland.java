@@ -208,7 +208,9 @@ public class skyland extends Map {
                 } else if (p.fall == 1) {
                     on += 1;
                     p.fall = 0;
-                    p.jumptime = 0;
+                    if (p.jumptime > 0) {
+                        p.jumptime = 0;
+                    }
                     if (p.getAce() == 0) {
                         p.nowstate = p.getImage().getwalk(p.getdirect(), 0);
                     } else if (p.getAce() == 1) {

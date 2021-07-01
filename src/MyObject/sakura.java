@@ -50,7 +50,7 @@ public class sakura extends object {
         // TODO Auto-generated method stub
         tick += 1;
         for (CharacterProtype p : player) {
-            if (p.Player != user && state == 0) {
+            if (p.Player != user && state == 0 && tick >= 15) {
                 if ((pos.y - 25 > p.getpos().y + 120 && pos.y - 25 < p.getpos().y + 220)
                         || (pos.y + 20 > p.getpos().y + 120 && pos.y + 20 < p.getpos().y + 220)) {
                     if ((pos.x + 45 > p.getpos().x && pos.x + 45 < p.getpos().x + 150)

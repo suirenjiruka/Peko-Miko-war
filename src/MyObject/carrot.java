@@ -28,7 +28,7 @@ public class carrot extends object {
     @Override
     public boolean update(CharacterProtype[] player) {
         // TODO Auto-generated method stub
-        if (direct == 1) {
+        if (direct == 1) { // 移動
             pos.translate(40, 0);
         } else if (direct == 2) {
             pos.translate(-40, 0);
@@ -36,6 +36,7 @@ public class carrot extends object {
         boolean ans = false;
         for (CharacterProtype p : player) {
             if ((pos.y + height > p.getpos().y + 20 && pos.y + height < p.getpos().y + 220)
+                    // 命中判定，如果助教嫌太長太醜可以跳過，基本上所有物件都是相似的
                     || (pos.y > p.getpos().y + 20 && pos.y < p.getpos().y + 220)) {
                 if (direct == 1) {
                     if ((pos.x + width + 5 > p.getpos().x && pos.x + width + 5 < p.getpos().x + 150)
