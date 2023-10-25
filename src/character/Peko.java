@@ -32,7 +32,7 @@ public class Peko extends CharacterProtype {
 
     @Override
     public void WinVocal() {
-        Audio.playSounds("PEKOwww", 3);
+        // Audio.playSounds("PEKOwww", 3);
     }
 
     @Override
@@ -46,7 +46,7 @@ public class Peko extends CharacterProtype {
                         wx, wy, this.Player, direction, cimg.getskill(1, (direction == 1) ? 0 : 1)));
             }
         }
-        Audio.playSounds("PEKO1", 0);
+        // Audio.playSounds("PEKO1", 2);
         return;
     }
 
@@ -66,7 +66,7 @@ public class Peko extends CharacterProtype {
             oblist.add(
                     new donchan(target.x + 30, -30, wx, wy, this.Player, 1, cimg.getskill(2, 0), cimg.getskill(2, 1)));
         }
-        Audio.playSounds("PEKO2", 0);
+        // Audio.playSounds("PEKO2", 2);
         return;
     }
 
@@ -91,12 +91,12 @@ public class Peko extends CharacterProtype {
     @Override
     public void atkvocal() {
         // TODO Auto-generated method stub
-        Audio.playSounds("PEKOATK", 5);
+        // Audio.playSounds("PEKOATK", 7);
     }
 
     @Override
     public void skillvocal() {
         // TODO Auto-generated method stub
-        Audio.playSounds("PEKO3", 4);
+        // Audio.playSounds("PEKO3", 6);
     }
 }

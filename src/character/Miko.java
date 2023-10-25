@@ -36,7 +36,7 @@ public class Miko extends CharacterProtype {
     @Override
     public void WinVocal() {
         // TODO Auto-generated method stub
-        Audio.playSounds("Mikowww", 3);
+        // Audio.playSounds("Mikowww", 3);
     }
 
     @Override
@@ -48,7 +48,7 @@ public class Miko extends CharacterProtype {
             oblist.add(new sakura((direction == 1) ? pos.x + 185 : pos.x - 35, pos.y + 140, wx, wy, this.Player,
                     cimg.getskill(1, 0), cimg.getskill(1, 1)));
         }
-        Audio.playSounds("Miko1", 8);
+        // Audio.playSounds("Miko1", 10);
         return;
     }
 
@@ -70,7 +70,7 @@ public class Miko extends CharacterProtype {
             oblist.add(new Mikocat((direction == 1) ? pos.x + 170 : pos.x - 120, pos.y + 100, wx, wy, this.Player,
                     direction, cimg.getskill(2, (direction == 1) ? 0 : 2), cimg.getskill(2, (direction == 1) ? 1 : 3)));
         }
-        Audio.playSounds("Miko2", 8);
+        // Audio.playSounds("Miko2", 10);
         return;
     }
 
@@ -97,11 +97,11 @@ public class Miko extends CharacterProtype {
 
     @Override
     public void atkvocal() {
-        Audio.playSounds("MikoATK", 0);
+        // Audio.playSounds("MikoATK", 2);
     }
 
     @Override
     public void skillvocal() {
-        Audio.playSounds("Miko3", 12.0f);
+        // Audio.playSounds("Miko3", 14.0f);
     }
 }

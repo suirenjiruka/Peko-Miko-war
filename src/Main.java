@@ -3,8 +3,7 @@ import java.awt.*;
 import java.io.File;
 import java.lang.Thread;
 
-import media.Audio;
-
+import media.Audio.*;
 import static media.Audio.addAudioByFilePath;
 
 public class Main {

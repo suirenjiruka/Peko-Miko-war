@@ -89,7 +89,7 @@ public class Gameview extends JFrame {
         public void start() {
             this.setSize(view.givewidth(), view.giveheight());
             this.setLayout(null);
-            game = new Game((new Random().nextInt(299) % 3), cpage.p1_index, cpage.p2_index, view, this);
+            game = new Game((new Random().nextInt(2999) % 3), cpage.p1_index, cpage.p2_index, view, this);
             addKeyListener(new KeyAdapter() {
                 @Override
                 public void keyPressed(KeyEvent keyEvent) {
