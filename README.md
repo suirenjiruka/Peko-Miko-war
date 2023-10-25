@@ -2,78 +2,73 @@
 
 Design Report:
     *** 首先是內容有點多，所以我會在這裡補一需影片沒提到的內容，並且會錄製另外一段正式的試玩畫面**
-    *** 除此之外，設計上我會畫出我的思路圖，另外放在資料夾內***
 
-試玩影片連接: https://youtu.be/7g9T1Txa44M  (這不是demo)
+Starting:
+    using cmd and run #java Main
 
-遊戲玩法:
+Demo playing link: https://youtu.be/7g9T1Txa44M 
+
+playing introduction:
 
     Player 1
 
-         A: 左移
+         A: move left
 
-         D: 右移
+         D: move right
 
-         S: 向下跳(可以在空中時往下，或著從木製平台上下來)
+         S: jump down(down from air or above platform)
 
-         W: 向上跳(在空中最多兩段)
+         W: jump(at most twice on air)
 
-         E: 普攻(技能3施放時會替換成必殺技)
+         E: normal attack(during skill 3 period change into special attack)
 
-         Q: 防禦(減輕傷害，防禦期間不能移動)
+         Q: defend(alleviate damag, can't move during defending period)
 
-         1: 技能1
+         1: skill 1
 
-         2: 技能2
+         2: skill 2
 
-         3: 技能3
+         3: skill 3
 
     Player 2
-         ←: 左移
+         ←: move left
 
-         →: 右移
+         →: move right
 
-         ↓: 向下跳
+         ↓: jump down
 
-         ↑: 向上跳
+         ↑: jump
 
-         小鍵盤0: 普攻
+         Num 0:  normal attack
 
-         ctrl: 防禦
+         right ctrl: defend
 
-         小鍵盤1: 技能1
+         小鍵盤1: skill 1
 
-         小鍵盤2: 技能2
+         小鍵盤2: skill 2
 
-         小鍵盤3: 技能3
+         小鍵盤3: skill 3
 
-角色:  (PS. 本來想弄2P色的，但時間來不急，所以選同一隻角色可能會搞混)
+角色:  (PS. perhaps updating 2P colorin future, but know the same character looks identical)
 
-    Peko: HP:3500  MP:2800(初始750， 每次更新回8) 普攻傷害60 移速:20
-        skill 1: MP消耗200 自身前方隨機召喚3個蘿蔔飛彈
-        skill 2: MP消耗400 對手頭上施放兔子攻擊，在於對手處於同高度時分裂向兩側攻擊
-        skill 3: 必殺技期間每秒MP消耗6，每發攻擊消耗55 普攻轉成追蹤導彈
+    Peko: HP:3500  MP:2800(initial 750， ecover 8 earch frame) normal attack damage 60, moving speed:20
+        skill 1: MP consumption: 200, randomly summon three carrot missiles.
+        skill 2: MP consumption:400, call a rabbit on enemy's head, and fission into two at the smae height with enemy.
+        skill 3: consume 6 MP every second, each attack additionally consume 55 mp, special attack is a tracking rocket.
 
-    Miko: HP:2500  MP:2200(初始300 ， 每次更新回7) 普攻傷害80 移速:25
-        skill 1: MP消耗110 自身前方設置炸彈(一段時間未觸發會消失)
-        skill 2: MP消耗300 自身前方召喚貓咪施放攻擊
-        skill 3: 必殺技期間每秒MP消耗5，每發攻擊消耗45 普攻轉成一次4發的步槍子彈
+    Miko: HP:2500  MP:2200(initial 300 ， ecover 7 earch frame) normal attack damage 80, moving speed:25
+        skill 1: MP consumption: 110, setting a sakura bomb.(dissppearing after a period of time without triggered by stepped on)
+        skill 2: MP consumption:300, call a cat and deal damage in the front.
+        skill 3: consume  MP every second, each attack additionally consume 5 mp, special attack is 4 shots bullets.
 
 地圖:
 
-    木製平台:可從正下方跳上來，也可以透過下移鍵直接往下跳
+    wooden platform: can penetrate
 
-    石製平台:玩家無法通過，只能從兩側上去，也無法直接下移
+    rock platform: can't penetarte
 
-    共有機制: 隨機地圖處產生藥水(紅藥回復HP300， 藍藥回復MP450， 會避開產生於邊界)
+    potions: randomly show up in map (red one recover HP300， blue one recover MP450)
 
-    PEKOLAND: 兩側隨機的蘿蔔飛彈
-
-    天空城: 特殊道具翅膀: 短時間內賦予跳躍次數無限(取消二段跳的限制)
-            最上方有會移動的地板，最下方無地板，沒有踩在平台會墜落並產生傷害
-
-    樓頂: 地圖平台隨時間變動
-          中立型敵人在邊界來回移動，一段時間會自動消失
 
 Design:
     view:
