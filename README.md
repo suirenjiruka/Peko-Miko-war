@@ -39,15 +39,15 @@ playing introduction:
 
          ↑: jump
 
-         Num 0:  normal attack
+         num 0:  normal attack
 
          right ctrl: defend
 
-         小鍵盤1: skill 1
+         num 1: skill 1
 
-         小鍵盤2: skill 2
+         num 2: skill 2
 
-         小鍵盤3: skill 3
+         num 3: skill 3
 
 角色:  (PS. perhaps updating 2P colorin future, but know the same character looks identical)
 
